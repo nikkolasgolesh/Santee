@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcp5oje53awtk"]
+
+[ext_resource type="Script" path="res://Scripts/humming_bird.gd" id="1_6hfwy"]
+[ext_resource type="SpriteFrames" uid="uid://622jp6vemfsd" path="res://Sprites/AnimatedSprites/humming_bird.tres" id="1_lvtfq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p4pev"]
+radius = 12.0416
+
+[node name="HummingBird" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_6hfwy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_p4pev")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 10
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("1_lvtfq")
+animation = &"fly"
+frame_progress = 0.633085

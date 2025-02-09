@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://difuge6gvj43j"]
+
+[ext_resource type="PackedScene" uid="uid://dcp5oje53awtk" path="res://Scenes/humming_bird.tscn" id="1_xa4la"]
+[ext_resource type="PackedScene" uid="uid://dm387wkwk2mtq" path="res://Scenes/origin.tscn" id="2_we2yp"]
+
+[node name="Game" type="Node2D"]
+
+[node name="HummingBird" parent="." instance=ExtResource("1_xa4la")]
+scale = Vector2(-1, 1)
+
+[node name="Origin" parent="." instance=ExtResource("2_we2yp")]
