@@ -24,3 +24,8 @@ scale = Vector2(0.2, 0.2)
 sprite_frames = ExtResource("1_lvtfq")
 animation = &"fly"
 frame_progress = 0.633085
+
+[node name="Timer" type="Timer" parent="."]
+process_callback = 0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
